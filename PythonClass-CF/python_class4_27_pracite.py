@@ -42,7 +42,3 @@ def shache(self):
 
 car1.shache = types.MethodType(shache, car1)
 car1.shache()
-
-
-
-
