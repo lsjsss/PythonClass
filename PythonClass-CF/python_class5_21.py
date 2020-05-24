@@ -1,6 +1,6 @@
 s = '500\n123456\n5555555\n1\n'
 
-with open('f:\\sample.txt', 'w') as fp:
+with open('f:\\testpythonfile\\data.txt', 'w') as fp:
     fp.write(s)
 #
 # with open('f:\\sample.txt') as fp:
@@ -49,13 +49,13 @@ with open('f:\\sample.txt', 'w') as fp:
 #     fp.writelines(data)
 
 
-with open('f:\\sample.txt', 'r')as fp:
-    data = fp.readlines()
-data = [line.strip() for line in data]
-data = ','.join(data)
-data = data.split(',')
-data = [int(item) for item in data]
-data.sort()
-data = ','.join(map(str, data))
-with open('f:\\sample.txt', 'w') as fp:
-    fp.write(data)
+# with open('f:\\testpythonfile\\data.txt', 'r')as fp:
+#     data = fp.readlines()
+# data = [line.strip() for line in data]
+# data = ','.join(data)
+# data = data.split(',')
+# data = [int(item) for item in data]
+# data.sort()
+# data = ','.join(map(str, data))
+# with open('f:\\testpythonfile\\data.txt', 'w') as fp:
+#     fp.write(data)
