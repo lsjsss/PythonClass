@@ -7,8 +7,15 @@
 #     spiral.right(144)
 #
 # turtle.done()
-
-
+#
+# import random
+# number = random.random(1, 10)
+#
+# list = []
+# for i in range(1, 10):
+#     list.append(random.randint(1, 10))
+# print(list)
+#
 # int_a=10
 # int_b=0b10
 # int_c=0o10
@@ -133,10 +140,10 @@
 #
 #
 # list=[[74,75,87,62,95,57,84],[87,62,95,57,84],[62,95,57,84]]
-# print(list)
-# print(list[0])
-# print(list[0][0])
-# print(list[1][0:4])
+# print(list) # 输出整个列表
+# print(list[0]) # 输出列表第一组元素
+# print(list[0][0]) # 输出列表第一组第一个元素
+# print(list[1][0:4]) # 输出列表第二组第1到4个元素
 #
 # list=[[74,75,87,62,95,57,84],[87,62,95,57,84],[62,95,57,84]]
 # index=0     #使用索引遍历被嵌套列表的元素
@@ -147,130 +154,277 @@
 #     print()
 
 
-s1=[1,2,3,4]
-s2=[5,6,7]
-print([1,2,3]*3)
-
-tuple1=()
-print(tuple1)
-tuple2=("1",2,3)
-print(tuple2)
-tuple3=(4,5,6)
-print(tuple3)
+# s1=[1,2,3,4]
+# s2=[5,6,7]
+# print([1,2,3]*3)
+#
+# tuple1=()
+# print(tuple1)
+# tuple2=("1",2,3)
+# print(tuple2)
+# tuple3=(4,5,6)
+# print(tuple3)
 
 
 # tuple=(1,2,3,4,5,6)
 # print(tuple[0])
 
-print(type((1,2,3,4)))
-print(tuple([1,2,3]))
+# print(type((1,2,3,4)))
+# print(tuple([1,2,3]))
+
+
+# dict={"a":"1","b":"2","c":"3"}
+# dict["d"]="4" # 增
+# dict["b"]="5" # 删
+# del dict["c"] # 改
+# print(dict["a"]) # 查
+
+# s = "abc"
+# print(s[0 : len(s)-1])
+
+from datetime import datetime
+# dt = datetime.now()
+# print( '时间：(%Y-%m-%d %H:%M:%S %f): ' , dt.strftime( '%Y-%m-%d %H:%M:%S' ))
+
+# from datetime import datetime
+# print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
+# from datetime import datetime
+# print('今天是本年中的第%s天，第%s周的%s' %(datetime.now().strftime('%j'), datetime.now().strftime('%U'), datetime.now().strftime( '%A' ) ))
+
+
+# from datetime import datetime
+# # print('%s %s %s' %(datetime.now().strftime( '%a' ), datetime.now().strftime( '%b' ), datetime.now().strftime( '%d' ), datetime.now()))
+# print(datetime.now().strftime('%b %a %d %H:%M:%S %Y'))
+
+
+# def num(i):
+#     if (i == 1):
+#         return i
+#     else:
+#         return i * num(i-1)
+# print(num(5))
+
+
+# print('今天是今年的第%s天 '  % datetime.now().strftime( '%j' ) )
+# print('今周是今年的第%s周 '  % datetime.now().strftime( '%U' ) )
+
+
+# print("%s" %dict.items())
+
+# dict = {'Google': 'www.google.com', 'Runoob': 'www.runoob.com', 'taobao': 'www.taobao.com'}
+#
+# print("字典值 : %s" % dict.items())
+#
+# # 遍历字典列表
+# for key, values in dict.items():
+#     print (key, values)
 
 
 
+# dict1={"姓名":"李天","性别":"男","年龄":29}
+# #keys方法的使用
+# print(dict1.keys())
+# list1=list(dict1.keys())
+# print(list1)
+#
+# #values方法的使用
+# print(dict1.values())
+# list2=list(dict1.values())
+# print(list2)
+#
+# #items方法的使用
+# print(dict1.items())
+# list3=list(dict1.items())
+# print(list3)
+#
+# #setdefault方法的使用
+# dict1.setdefault("学号",201865112503)
+# print(dict1)
+# print(dict1.setdefault("学号",201865112530))
+# print(dict1)
+#
+# #update方法的使用
+# dict2={"姓名":"李天","学号":201865112503}
+# dict3={"姓名":"张琴"}
+# dict1.update(dict2)
+# print("1:",dict1)
+# dict1.update(dict3)
+# print("2:",dict1)
+#
+# #fromkeys 方法的使用
+# dict4={}
+# seq={"方便面","火腿肠","饼干"}
+# dict4=dict.fromkeys(seq)
+# print("1:",dict4)
+# dict4=dict.fromkeys(seq,0)
+# print("2:",dict4)
+#
+# #copy方法的使用
+# dict5=dict3.copy()
+# print(dict5)
+# print(id(dict3),id(dict5))
+#
+#
+# def test(a, b):
+#     print("a=", a, "b=", b)
+#
+#
+# test(1, 3)
+# test(5 + 6, 8)
+#
+#
+# test(a=1,b=3)
+# test(b=3,a=1)
+# test(2,b=4)
+#
+# print('--------------------------')
+# def test1(a=1,b=1):
+#     print("a=",a,"b=",b)
+# test1()
+# test1(5)
+# test1(1,2)
+# test1(b=2,a=5)
+# test1()
+# test1(3,b=5)
+#
+#
+# def student(name, *other):  # other 参数是不定长参数，接收的数据保存为元组
+#     print(name, end=":")
+#     print(other)
+# student("李天", "男", 19, 172.5)
+# student("李天", 172.5)
+#
+#
+# def student(name,**other):
+#     print(name,other)
+# student("李天",sex="男",age=18)
+# student(sex="男",age=18,name="李天")
+#
+#
+#
+#
+# def student(name,*course,**other):
+#     print(name,course,other)
+# student("李天","英语","Python",sex="男",age=18)
+#
+#
+#
+#
+# def function1():         # 函数function1的定义
+#     print("我是函数1！")
+# def function2():         # 函数function2的定义
+#     print("我是函数2！")
+#     function1()         # 在 function2 函数中调用 function1 函数
+# function2()          #调用 function2 函数
+#
+#
+# def func5(a,b,*c):
+#         print(a,b)
+# func5(1,2,3,4,5,6)
+#
+#
+#
+# g = lambda x,y=3,z=5:x*y*z
+# print(g(1))
 
-dict1={"姓名":"李天","性别":"男","年龄":29}
-#keys方法的使用
-print(dict1.keys())
-list1=list(dict1.keys())
-print(list1)
 
-#values方法的使用
-print(dict1.values())
-list2=list(dict1.values())
-print(list2)
-
-#items方法的使用
-print(dict1.items())
-list3=list(dict1.items())
-print(list3)
-
-#setdefault方法的使用
-dict1.setdefault("学号",201865112503)
-print(dict1)
-print(dict1.setdefault("学号",201865112530))
-print(dict1)
-
-#update方法的使用
-dict2={"姓名":"李天","学号":201865112503}
-dict3={"姓名":"张琴"}
-dict1.update(dict2)
-print("1:",dict1)
-dict1.update(dict3)
-print("2:",dict1)
-
-#fromkeys 方法的使用
-dict4={}
-seq={"方便面","火腿肠","饼干"}
-dict4=dict.fromkeys(seq)
-print("1:",dict4)
-dict4=dict.fromkeys(seq,0)
-print("2:",dict4)
-
-#copy方法的使用
-dict5=dict3.copy()
-print(dict5)
-print(id(dict3),id(dict5))
-
-
-def test(a, b):
-    print("a=", a, "b=", b)
-
-
-test(1, 3)
-test(5 + 6, 8)
-
-
-test(a=1,b=3)
-test(b=3,a=1)
-test(2,b=4)
-
-print('--------------------------')
-def test1(a=1,b=1):
-    print("a=",a,"b=",b)
-test1()
-test1(5)
-test1(1,2)
-test1(b=2,a=5)
-test1()
-test1(3,b=5)
-
-
-def student(name, *other):  # other 参数是不定长参数，接收的数据保存为元组
-    print(name, end=":")
-    print(other)
-student("李天", "男", 19, 172.5)
-student("李天", 172.5)
-
-
-def student(name,**other):
-    print(name,other)
-student("李天",sex="男",age=18)
-student(sex="男",age=18,name="李天")
+# add = lambda x, y: x + y
+# print(add(2, 3))
 
 
 
+# for i in range(1 ,3):
+#     for j in range(2, 5):
+#         print(i*j)
 
-def student(name,*course,**other):
-    print(name,course,other)
-student("李天","英语","Python",sex="男",age=18)
-
-
-
-
-def function1():         # 函数function1的定义
-    print("我是函数1！")
-def function2():         # 函数function2的定义
-    print("我是函数2！")
-    function1()         # 在 function2 函数中调用 function1 函数
-function2()          #调用 function2 函数
+# for s in "testatest":
+#     if s=="a" or s=="e":
+#         continue
+#     print(s, end='')
 
 
-def func5(a,b,*c):
-        print(a,b)
-func5(1,2,3,4,5,6)
+# list_one=[4,5,6]
+# list_two=list_one
+# list_one[2]=3
+# print(list_two)
+#
+a = 9
+b = 2
+# print(a + b)
+# print(a // b)
+# print(a % b)
+# print(a ** b)
+
+print(eval('2+4/5'))
+
+print(16/4-2**5*8/4%5//2)
+print(3*4**2//8%7)
+
+def Sum(a, b=3, c=5):
+    print(a,b,c)
+Sum(8,2)
+
+print(3>2>1)
+
+
+list_demo=[1,2,3,4,5,'a','b']
+print(list_demo[1],list_demo[5])
+
+
+s=['a','b']
+s.append([1,2])
+s.insert(1,7);
+print(s)
+
+
+print( 0.1 + 0.2 == 0.3 )
+
+a = b = 2
+
+
+# x=input()
+# print(x)
+
+a=1
+b=2
+print(a,b)
 
 
 
-g = lambda x,y=3,z=5:x*y*z
-print(g(1))
-print(2)
+print(list(map(str, [1, 2, 3])))
+
+x=3
+x+=6
+print(x)
+
+
+aList = [3, 4, 5, 6, 7, 9, 11, 13, 15, 17]
+print(aList[3:7])
+
+
+print(int(4**0.5))
+print(1<2<3)
+
+print(sum(range(1, 10)))
+print('The first:{1}, the second is {0}'.format(65, 97))
+
+
+print('-----------------')
+
+print(sorted([111,2,33], key=lambda x:len(str(x))))
+for i in range(3):
+        print(i, end=',')
+
+y = {1:2,2:3,3:4}
+print(sum(y))
+
+print(3 |5)
+
+# x=3
+# x+=6
+# print(0 or 5)
+
+x={i:str(i+3) for i in range(3)}
+print("".join(x.values()))
+
